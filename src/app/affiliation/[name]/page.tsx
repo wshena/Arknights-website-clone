@@ -39,7 +39,7 @@ async function fetchOperators(name: string) {
   return response.json();
 }
 
-export default async function Page({ params }: { params: { name: string } }) {
+export default async function Page({ params }: { params: any }) {
   const {name} = await params
   const affiliationName = decodeURIComponent(name).toLowerCase();
 
